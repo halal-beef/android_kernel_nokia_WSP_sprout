@@ -16,31 +16,31 @@ import os
 import collections
 import xml.dom.minidom
 
-from GpioObj import GpioObj
-from GpioObj import GpioObj_whitney
-from GpioObj import GpioObj_MT6759
-from GpioObj import GpioObj_MT6739
-from GpioObj import GpioObj_MT6771
-from GpioObj import GpioObj_MT6763
-from EintObj import EintObj
-from EintObj import EintObj_MT6750S
-from EintObj import EintObj_MT6739
-from AdcObj import AdcObj
-from ClkObj import ClkObj
-from ClkObj import ClkObj_Everest
-from ClkObj import ClkObj_Olympus
-from ClkObj import ClkObj_Rushmore
-from ClkObj import ClkObj_MT6779
-from I2cObj import I2cObj
-from I2cObj import I2cObj_MT6759
-from I2cObj import I2cObj_MT6775
-from PmicObj import PmicObj
-from PmicObj import PmicObj_MT6758
-from Md1EintObj import Md1EintObj
-from Md1EintObj import Md1EintObj_MT6739
-from PowerObj import PowerObj
-from KpdObj import KpdObj
-from ModuleObj import ModuleObj
+from . GpioObj import GpioObj
+from . GpioObj import GpioObj_whitney
+from . GpioObj import GpioObj_MT6759
+from . GpioObj import GpioObj_MT6739
+from . GpioObj import GpioObj_MT6771
+from . GpioObj import GpioObj_MT6763
+from . EintObj import EintObj
+from . EintObj import EintObj_MT6750S
+from . EintObj import EintObj_MT6739
+from . AdcObj import AdcObj
+from . ClkObj import ClkObj
+from . ClkObj import ClkObj_Everest
+from . ClkObj import ClkObj_Olympus
+from . ClkObj import ClkObj_Rushmore
+from . ClkObj import ClkObj_MT6779
+from . I2cObj import I2cObj
+from . I2cObj import I2cObj_MT6759
+from . I2cObj import I2cObj_MT6775
+from . PmicObj import PmicObj
+from . PmicObj import PmicObj_MT6758
+from . Md1EintObj import Md1EintObj
+from . Md1EintObj import Md1EintObj_MT6739
+from . PowerObj import PowerObj
+from . KpdObj import KpdObj
+from . ModuleObj import ModuleObj
 
 from utility.util import log
 from utility.util import LogLevel
@@ -55,6 +55,10 @@ para_map = {'adc':['adc_h', 'adc_dtsi'],\
             'kpd':['kpd_h', 'kpd_dtsi'],\
             'pmic':['pmic_drv_h', 'pmic_drv_c', 'pmic_h', 'pmic_c', 'pmic_dtsi'],\
             'power':['power_h']}
+
+def cmp(a, b):
+    return (a > b) - (a < b) 
+
 
 class ChipObj:
     def __init__(self, path, dest):
@@ -269,8 +273,6 @@ class MT6757_P25(ChipObj):
         ChipObj.init_objs(self)
         ChipObj.replace_obj(self, 'clk', ClkObj_Olympus())
         ChipObj.replace_obj(self, 'i2c', I2cObj_MT6759())
-        ChipObj.replace_obj(self, 'gpio', GpioObj_MT6759())
-        ChipObj.replace_obj(self, 'eint', EintObj_MT6739(ChipObj.get_gpioObj(self)))
 
     def parse(self):
         return ChipObj.parse(self)
@@ -353,7 +355,6 @@ class MT6763(ChipObj):
     def init_objs(self):
         ChipObj.init_objs(self)
         ChipObj.replace_obj(self, 'gpio', GpioObj_MT6763())
-        ChipObj.replace_obj(self, 'eint', EintObj_MT6739(ChipObj.get_gpioObj(self)))
         ChipObj.replace_obj(self, 'i2c', I2cObj_MT6759())
         ChipObj.refresh_eintGpioMap(self)
 
@@ -453,6 +454,5 @@ class MT6779(ChipObj):
         ChipObj.replace_obj(self, 'md1_eint', Md1EintObj_MT6739())
         ChipObj.replace_obj(self, "i2c", I2cObj_MT6775())
         ChipObj.refresh_eintGpioMap(self)
-
 
 
