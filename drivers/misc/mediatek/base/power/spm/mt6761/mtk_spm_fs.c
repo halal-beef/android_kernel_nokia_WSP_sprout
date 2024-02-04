@@ -17,7 +17,7 @@
 #include <linux/sysfs.h>
 #include <linux/string.h>
 
-#include <mtk_spm_internal.h>
+#include "mtk_spm_internal.h"
 #include <mtk_spm_resource_req_internal.h>
 
 /**************************************

@@ -40,12 +40,12 @@
 #include <mtk_wd_api.h>
 #include <ext_wd_drv.h>
 #endif
-#include <mrdump_panic.h>
+#include "mrdump_panic.h"
 #include <mt-plat/mtk_secure_api.h>
 #ifdef CONFIG_MTK_EIC_HISTORY_DUMP
 #include <linux/irqchip/mtk-eic.h>
 #endif
-#include <mrdump_private.h>
+#include "mrdump_private.h"
 #include <mt-plat/upmu_common.h>
 
 #define THREAD_INFO(sp) ((struct thread_info *) \

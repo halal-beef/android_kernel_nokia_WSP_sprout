@@ -15,8 +15,9 @@
 #include <linux/module.h>
 #include <linux/random.h>
 #include <asm/setup.h>
-#include <mtk_spm_internal.h>
-#include <mtk_power_gs_api.h>
+#include "mtk_spm_internal.h"
+#include "mtk_power_gs_api.h"
+#include "mtk_spm_reg.h"
 
 #define WORLD_CLK_CNTCV_L        (0x10017008)
 #define WORLD_CLK_CNTCV_H        (0x1001700C)

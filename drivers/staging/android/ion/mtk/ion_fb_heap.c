@@ -328,7 +328,7 @@ void ion_fb_heap_destroy(struct ion_heap *heap)
 	fb_heap = NULL;
 }
 
-int ion_drv_create_FB_heap(ion_phys_addr_t fb_base, size_t fb_size)
+/*int ion_drv_create_FB_heap(ion_phys_addr_t fb_base, size_t fb_size)
 {
 	struct ion_platform_heap *heap_data;
 
@@ -348,4 +348,4 @@ int ion_drv_create_FB_heap(ion_phys_addr_t fb_base, size_t fb_size)
 	kfree(heap_data);
 
 	return 0;
-}
+}*/

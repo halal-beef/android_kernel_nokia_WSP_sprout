@@ -64,9 +64,9 @@
 #include <mt-plat/upmu_common.h>
 #include <pmic_lbat_service.h>
 
-#include <mtk_gauge_class.h>
+#include "mtk_gauge_class.h"
 #include "mtk_battery_internal.h"
-#include <mtk_gauge_time_service.h>
+#include "mtk_gauge_time_service.h"
 
 #include <mach/mtk_battery_property.h>
 #include <mach/mtk_battery_table.h>
@@ -88,6 +88,7 @@
 /* ============================================================ */
 struct mtk_battery gm;
 extern char battery_vendor_name[50];
+int battery_pn_flag = 0;
 
 /* ============================================================ */
 /* gauge hal interface */

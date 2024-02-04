@@ -11,8 +11,8 @@
  * See http://www.gnu.org/licenses/gpl-2.0.html for more details.
  */
 
-#ifndef __MTK_DVFSRC_REG_MT6765_H
-#define __MTK_DVFSRC_REG_MT6765_H
+#ifndef __MTK_DVFSRC_REG_MT6761_H
+#define __MTK_DVFSRC_REG_MT6761_H
 
 /**************************************
  * Define and Declare
@@ -175,4 +175,4 @@
 #define DVFSRC_RSRV_4              (0x610)
 #define DVFSRC_RSRV_5              (0x614)
 
-#endif /* __MTK_DVFSRC_REG_MT6765_H */
+#endif /* __MTK_DVFSRC_REG_MT6761_H */

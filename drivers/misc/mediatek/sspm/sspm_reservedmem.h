@@ -15,7 +15,7 @@
 #define __SSPM_RESERVED_H__
 
 #include <linux/types.h>
-#include "sspm_define.h"
+#include "mt6761/sspm_define.h"
 
 struct sspm_reserve_mblock {
 	u32 num;

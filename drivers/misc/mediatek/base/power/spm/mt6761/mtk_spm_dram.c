@@ -19,7 +19,8 @@
 #include <mtk_dramc.h>
 #endif /* CONFIG_MTK_DRAMC */
 
-#include <mtk_spm_internal.h>
+#include "mtk_spm_internal.h"
+#include "mtk_spm_reg.h"
 
 int spmfw_idx = -1;
 

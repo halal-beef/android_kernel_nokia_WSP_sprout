@@ -13,8 +13,8 @@
 
 #ifndef _DISP_RECOVERY_H_
 #define _DISP_RECOVERY_H_
-#include "ddp_info.h"
-#include "ddp_dsi.h"
+#include "../../mt6765/dispsys/ddp_info.h"
+#include "../../mt6765/dispsys/ddp_dsi.h"
 
 #define GPIO_EINT_MODE	0
 #define GPIO_DSI_MODE	1

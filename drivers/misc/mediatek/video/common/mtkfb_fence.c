@@ -11,7 +11,7 @@
  * GNU General Public License for more details.
  */
 
-#include "disp_drv_log.h"
+#include "../mt6765/videox/disp_drv_log.h"
 #include "ion_drv.h"
 #include <linux/slab.h>
 #include <linux/wait.h>

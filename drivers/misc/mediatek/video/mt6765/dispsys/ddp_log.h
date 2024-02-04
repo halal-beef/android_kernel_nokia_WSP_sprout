@@ -18,7 +18,7 @@
 #endif
 #include "display_recorder.h"
 #include "ddp_debug.h"
-#include "disp_drv_log.h"
+#include "../../mt6765/videox/disp_drv_log.h"
 
 #ifndef LOG_TAG
 #define LOG_TAG

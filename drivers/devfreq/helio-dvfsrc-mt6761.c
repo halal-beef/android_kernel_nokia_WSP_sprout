@@ -20,8 +20,9 @@
 #include <ext_wd_drv.h>
 #include <mt_emi_api.h>
 
-#include <helio-dvfsrc.h>
-#include <helio-dvfsrc-opp.h>
+#include "helio-dvfsrc.h"
+#include "helio-dvfsrc-opp.h"
+#include "mtk_dvfsrc_reg_mt6761.h"
 #include <mtk_dvfsrc_reg.h>
 #include <mtk_spm_internal.h>
 #include <spm/mtk_vcore_dvfs.h>

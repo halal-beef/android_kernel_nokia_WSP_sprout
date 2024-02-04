@@ -15,11 +15,14 @@
 #define __ION_DRV_H__
 #include <linux/version.h>
 
-#include <ion.h>
+#include <config/mtk/ion.h>
+#include "../ion.h"
 
 #define BACKTRACE_SIZE 10
 
 /* Structure definitions */
+
+typedef int ion_user_handle_t;
 
 enum ION_CMDS {
 	ION_CMD_SYSTEM,
@@ -253,7 +256,7 @@ size_t ion_mm_heap_total_memory(void);
  * ion_mm_heap_total_memory() - get mm heap buffer detail info.
  */
 void ion_mm_heap_memory_detail(void);
-int ion_drv_create_FB_heap(ion_phys_addr_t fb_base, size_t fb_size);
+int ion_drv_create_FB_heap(phys_addr_t fb_base, size_t fb_size);
 
 typedef int (ion_mm_buf_destroy_callback_t)(struct ion_buffer *buffer,
 					    unsigned int phy_addr);

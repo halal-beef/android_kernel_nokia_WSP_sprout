@@ -24,12 +24,13 @@
 #if defined(CONFIG_MTK_PMIC) || defined(CONFIG_MTK_PMIC_NEW_ARCH)
 #include <mt-plat/upmu_common.h>
 #endif
-#include <mtk_spm_irq.h>
+#include "mtk_spm_irq.h"
 
-#include <mtk_spm_internal.h>
-#include <mtk_spm_suspend_internal.h>
-#include <mtk_spm_resource_req_internal.h>
-#include <mtk_spm_resource_req.h>
+#include "mtk_spm_internal.h"
+#include "mtk_spm_suspend_internal.h"
+#include "mtk_spm_resource_req_internal.h"
+#include "mtk_spm_resource_req.h"
+#include "mtk_spm_reg.h"
 
 #include <mt-plat/mtk_ccci_common.h>
 

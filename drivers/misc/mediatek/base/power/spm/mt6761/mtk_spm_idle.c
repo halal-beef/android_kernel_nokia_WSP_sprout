@@ -23,11 +23,12 @@
 
 #include <mtk_idle.h>
 #include <mtk_idle_internal.h>
-#include <mtk_spm_suspend_internal.h>
+#include "mtk_spm_suspend_internal.h"
 #include <mtk_spm_resource_req.h>
 
 #include "mtk_spm_internal.h"
 #include "pwr_ctrl.h"
+#include "mtk_spm_reg.h"
 
 #if defined(MTK_IDLE_GS_DUMP_READY)
 /* NOTE: Check golden setting dump header file for each project */
